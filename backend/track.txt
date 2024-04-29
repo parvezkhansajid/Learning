@@ -18,5 +18,6 @@
         * const server = http.createServer((req, res, next)=> {
             res.end("Response")
         })
-
+    iv. req.url --> find the url
+    
 5.
