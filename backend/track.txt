@@ -19,5 +19,28 @@
             res.end("Response")
         })
     iv. req.url --> find the url
+
+5. Module
+    * 3 Types of Module
+        i. Built-in Module
+
+        ii. Third Party Module
+
+        iii. File Based Module
+            * create file based Module(file name = feature)
+                const name = "Mr.X"
+                module.exports = name;
+            * import module
+                const name = require('./feature');
     
-5.
+    * If you want to use import, goto package.json
+        * "type": "module"
+        
+        * import http from 'http';
+        * export default name;
+
+    * ~~ is equal to Math.floor();
+
+    * import fs from 'fs'
+    * fs is used for file read/write
+    * fs.readFile(); but we will use fs.readFileSync();

@@ -1,8 +1,15 @@
-const http = require("http");
+// const http = require("http");
+import http from "http";
+import { gernerateRandomNumber } from "./generateRandomNumber.js";
+import fs from "fs";
+
+console.log(gernerateRandomNumber());
+
+const file = fs.readFileSync("./fileRead.html");
 
 const server = http.createServer((req, res, next) => {
   if (req.url == "/") {
-    res.end("<h1>Home Page</h1>");
+    res.end(file);
   } else if (req.url == "/about") {
     res.end("<h1>About Page</h1>");
   } else if (req.url == "/contact") {
