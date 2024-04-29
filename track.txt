@@ -1,0 +1,22 @@
+1. Install Nodejs
+    * node  --> Run node
+    * .exit --> Exit node
+
+2. Crate Nodejs App
+    * npm init / yarn init
+    
+3. Install nodemon
+    * npm install -g nodemone
+
+4. 
+    i. create a server
+        * http.createServer(()=> {})
+    ii. listen from server
+        * const server = http.createServer(()=> {})
+        * server.listen(()=> {})
+    iii. Send response to the webpage
+        * const server = http.createServer((req, res, next)=> {
+            res.end("Response")
+        })
+
+5.
