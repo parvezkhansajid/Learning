@@ -1,25 +1,12 @@
-// const http = require("http");
-import http from "http";
-import { gernerateRandomNumber } from "./generateRandomNumber.js";
-import fs from "fs";
+import express from "express";
 
-console.log(gernerateRandomNumber());
+const app = express();
+const port = 2711;
 
-const file = fs.readFileSync("./fileRead.html");
-
-const server = http.createServer((req, res, next) => {
-  if (req.url == "/") {
-    res.end(file);
-  } else if (req.url == "/about") {
-    res.end("<h1>About Page</h1>");
-  } else if (req.url == "/contact") {
-    res.end("<h1>Contact Page</h1>");
-  } else {
-    res.end("<h1>Page Not Found</h1>");
-  }
+app.get("/", (req, res, next) => {
+  res.send("<h1>Home</h1>");
 });
 
-const port = 2711;
-server.listen(port, () => {
-  console.log(`Server is working!`);
+app.listen(port, () => {
+  console.log(`Server running on: http://localhost:${port}`);
 });

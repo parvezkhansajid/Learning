@@ -44,3 +44,11 @@
     * import fs from 'fs'
     * fs is used for file read/write
     * fs.readFile(); but we will use fs.readFileSync();
+
+
+6. Create Server using Express
+    * res.sendStatus(code);
+    * res.json({
+        success: true,
+        message: []
+    })
