@@ -65,3 +65,6 @@
     * For use Static file
         i. express.static();
         ii. write the code in this manner, because express.static() is a middlware ==> app.use(express.static(path.join(path.resolve(), "public")));
+
+8. Middleware for accessing data from from
+    * app.use(express.urlencoded({extended: true}))
