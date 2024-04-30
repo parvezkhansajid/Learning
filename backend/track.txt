@@ -60,3 +60,8 @@
     * Access variable in ejs -- <%=var_name %>
     * we can use <%= locals %>, locals is full object <%=name %> is equal to <%= locals.name %>
     
+    * path.resolve() --> used for find current path
+
+    * For use Static file
+        i. express.static();
+        ii. write the code in this manner, because express.static() is a middlware ==> app.use(express.static(path.join(path.resolve(), "public")));
